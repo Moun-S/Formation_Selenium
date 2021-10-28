@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test thread-count="5" name="/home/neo/IdeaProjects/Formation_Selenium(failed)">
+    <classes>
+      <class name="test.java.TestAddSalarie">
+        <methods>
+          <include name="AddSalarie"/>
+          <include name="TearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- test.java.TestAddSalarie -->
+    </classes>
+  </test> <!-- /home/neo/IdeaProjects/Formation_Selenium(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

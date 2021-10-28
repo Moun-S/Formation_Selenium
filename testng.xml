@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/neo/IdeaProjects/Formation_Selenium">
+        <classes>
+            <class name="test.java.TestAddSalarie">
+                <methods>
+                    <include name="AddSalarie"/>
+                </methods>
+            </class>
+
+            <class name="test.java.TestSuppSalarie">
+                <methods>
+                    <include name="SuppSalarie"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
