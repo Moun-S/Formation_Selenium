@@ -1,6 +1,6 @@
 package test.java;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,7 +28,7 @@ public class TestAddSalarie {
         //Initialisation du driver
         driver = new FirefoxDriver();
         //Supression des cookies
-        driver.manage().deleteAllCookies();
+        //driver.manage().deleteAllCookies();
     }
 
 
@@ -95,15 +95,15 @@ public class TestAddSalarie {
         new Select(driver.findElement(By.id("empsearch_sub_unit"))).selectByValue("5");
         driver.findElement(By.id("searchBtn")).click();
 
-        File scrFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile2, new File("/home/neo/Bureau/FORMATION_BITOO/10 - Selenium/screenshot.png-" + new Date()));
+        //File scrFile2 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        //FileUtils.copyFile(scrFile2, new File("/home/neo/Bureau/FORMATION_BITOO/10 - Selenium/screenshot.png-" + new Date()));
 
         Thread.sleep(2000);
     }
 
     @AfterClass(alwaysRun = true)
     public void TearDown() throws Exception {
-        driver.manage().deleteAllCookies();
+        //driver.manage().deleteAllCookies();
         driver.close();
     }
 }
