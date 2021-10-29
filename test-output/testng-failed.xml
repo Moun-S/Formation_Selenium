@@ -10,6 +10,13 @@
           <include name="Setup"/>
         </methods>
       </class> <!-- test.java.TestAddSalarie -->
+      <class name="test.java.TestSuppSalarie">
+        <methods>
+          <include name="SuppSalarie"/>
+          <include name="Setup"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- test.java.TestSuppSalarie -->
     </classes>
   </test> <!-- /home/neo/IdeaProjects/Formation_Selenium(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
