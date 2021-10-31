@@ -1,6 +1,7 @@
 package test.java;
 
 //import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,7 +27,7 @@ public class TestSuppSalarie {
         //Initialisation du driver
         driver = new FirefoxDriver();
         //Supression des cookies
-        //driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies();
     }
 
 
@@ -73,15 +74,15 @@ public class TestSuppSalarie {
         String actual = driver.findElement(By.xpath("//td[contains(text(),'No Records Found')]")).getText();
         Assert.assertEquals(expected, actual);
 
-        //File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        //FileUtils.copyFile(scrFile, new File("/home/neo/Bureau/FORMATION_BITOO/10 - Selenium/screenshot.png-" + new Date()));
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("/home/neo/Bureau/FORMATION_BITOO/10 - Selenium/screenshot.png-" + new Date()));
 
         Thread.sleep(2000);
     }
 
     @AfterClass(alwaysRun = true)
     public void TearDown() throws Exception {
-        //driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies();
         driver.close();
     }
 }
